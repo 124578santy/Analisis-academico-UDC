@@ -87,7 +87,7 @@ if archivos:
         # --- Pestaña 2: Buscador ---
         with tab2:
             st.header("Buscar Estudiante")
-            busqueda = st.text_input("Introduce el nombre del estudiante a buscar:")
+            busqueda = st.text_input("Introduce el nombre del estudiante a buscar (Debes buscar el nombre exactamente como aparece en el archivo que cargaste):")
             
             if busqueda:
                 encontrados = df_estudiantes[df_estudiantes['Nombre'].str.lower().str.contains(busqueda.lower(), na=False)]
